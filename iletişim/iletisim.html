@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İletişim</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="hakkimda.html">Benim Sitem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="miras.html">Miras</a></li>
+        <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container mt-5" id="app">
+  <h1 class="text-center mb-4">İletişim</h1>
+
+  <form action="formsonuc.php" method="POST" @submit.prevent="submitForm">
+    <div class="mb-3">
+      <label for="ad" class="form-label">Ad Soyad:</label>
+      <input type="text" id="ad" name="ad" class="form-control" v-model="form.ad">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">E-posta:</label>
+      <input type="text" id="email" name="email" class="form-control" v-model="form.email">
+    </div>
+
+    <div class="mb-3">
+      <label for="telefon" class="form-label">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" class="form-control" v-model="form.telefon">
+    </div>
+
+    <div class="mb-3">
+      <label for="mesaj" class="form-label">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" class="form-control" v-model="form.mesaj"></textarea>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <button type="submit" class="btn btn-primary">Gönder</button>
+      <button type="button" class="btn btn-secondary" @click="temizle">Temizle</button>
+      <button type="button" class="btn btn-success" @click="jsKontrol">JS ile Kontrol</button>
+      <button type="button" class="btn btn-info" @click="vueKontrol">Vue ile Kontrol</button>
+    </div>
+  </form>
+</main>
+
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      form: {
+        ad: '',
+        email: '',
+        telefon: '',
+        mesaj: ''
+      }
+    },
+    methods: {
+      
+      jsKontrol() {
+        const ad = this.form.ad.trim();
+        const email = this.form.email.trim();
+        const telefon = this.form.telefon.trim();
+        const mesaj = this.form.mesaj.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telefonRegex = /^\d{1,10}$/;
+
+        if (!ad || !email || !telefon || !mesaj) {
+          alert("JS: Tüm alanları doldurun.");
+          return;
+        }
+
+        if (!emailRegex.test(email)) {
+          alert("JS: Geçerli bir e-posta girin.");
+          return;
+        }
+
+        if (!telefonRegex.test(telefon)) {
+          alert("JS: Telefon yalnızca rakamlardan oluşmalı ve en fazla 10 haneli olmalı.");
+          return;
+        }
+
+        alert("JS kontrolü başarılı. Gönder butonuna basarak formu iletebilirsiniz.");
+      },
+
+      
+      vueKontrol() {
+        const { ad, email, telefon, mesaj } = this.form;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telefonRegex = /^\d{1,10}$/;
+
+        if (!ad || !email || !telefon || !mesaj) {
+          alert("Vue: Tüm alanları doldurun.");
+          return;
+        }
+
+        if (!emailRegex.test(email)) {
+          alert("Vue: Geçerli bir e-posta girin.");
+          return;
+        }
+
+        if (!telefonRegex.test(telefon)) {
+          alert("Vue: Telefon yalnızca rakamlardan oluşmalı ve en fazla 10 haneli olmalı.");
+          return;
+        }
+
+        alert("Vue kontrolü başarılı. Gönder butonuna basarak formu iletebilirsiniz.");
+      },
+
+      
+      submitForm() {
+        const { ad, email, telefon, mesaj } = this.form;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telefonRegex = /^\d{1,10}$/;
+
+        if (!ad || !email || !telefon || !mesaj) {
+          alert("Gönder: Tüm alanları doldurun.");
+          return;
+        }
+
+        if (!emailRegex.test(email)) {
+          alert("Gönder: Geçerli bir e-posta girin.");
+          return;
+        }
+
+        if (!telefonRegex.test(telefon)) {
+          alert("Gönder: Telefon yalnızca rakamlardan oluşmalı ve en fazla 10 haneli olmalı.");
+          return;
+        }
+
+        
+        this.$el.querySelector("form").submit();
+      },
+
+      
+      temizle() {
+        this.form = { ad: '', email: '', telefon: '', mesaj: '' };
+      }
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
