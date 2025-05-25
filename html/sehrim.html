@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehrim</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hatay Şehri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class container>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="nav-link" href="hakkimda.html">Ana Sayfa</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="nav-link" href="cv.html">CV</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="nav-link" href="sehrim.html">Şehrim</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="nav-link" href="miras.html">Miras</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                  <a class="nav-link" href="iletisim.html">İletişim</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                
-                
 
-        
-            </div>
-          </nav>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="hakkimda.html">Benim Sitem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="miras.html">Miras</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
     </div>
-    <header>
-        <h1>Şehrim</h1>
-    </header>
-    <main>
-        <p>Şehrim hakkında genel bilgiler buraya gelecek.</p>
-    </main>
-    
+  </nav>
+
+
+<header class="hatay-header text-white text-center py-4">
+  <h1>Hatay</h1>
+  <p><strong><i>Binlerce yıllık tarih, kültür ve lezzet</i></strong></p>
+</header>
+
+  
+
+ 
+  <main class="container my-5">
+    <section>
+      <h2>Genel Bilgiler</h2>
+      <p><strong>Konum:</strong> Akdeniz Bölgesi</p>
+      <p><strong>Nüfus:</strong> Yaklaşık 1.6 milyon</p>
+      <p><strong>Özellik:</strong> Türkiye’nin en eski yerleşim yerlerinden biridir ve birçok medeniyete ev sahipliği yapmıştır.</p>
+    </section>
+
+    <section id="harbiye" class="mt-5">
+      <h2>Harbiye Şelaleleri</h2>
+      <p>Doğayla iç içe, huzur dolu bir ortam sunan Harbiye Şelaleleri, Hatay'ın en çok ziyaret edilen doğal güzelliklerinden biridir.</p><br>
+      <img src="images/harbiye.jpg" class="img-fluid rounded" alt="Harbiye Şelaleleri" >
+    </section>
+
+    <section id="uzuncarsi" class="mt-5">
+      <h2>Uzun Çarşı</h2>
+      <p>Antakya'nın merkezinde yer alan Uzun Çarşı; baharatları, yöresel ürünleri ve tarihi atmosferiyle ünlüdür.</p><br>
+      <img src="images/uzuncarsi.jpg" class="img-fluid rounded" alt="Uzun Çarşı">
+    </section>
+
+    <section id="mozaik" class="mt-5">
+      <h2>Hatay Arkeoloji Müzesi</h2>
+      <p>Dünyanın en büyük mozaik koleksiyonlarından birine ev sahipliği yapan müze, sanat ve tarih meraklıları için ideal bir yerdir.</p><br>
+      <img src="images/mozaik.jpg" class="img-fluid rounded" alt="Mozaik Müzesi">
+    </section>
+
+    <section id="habibineccar" class="mt-5">
+      <h2>Habib-i Neccar Camii</h2>
+      <p>Türkiye'nin en eski camisi olan Habib-i Neccar Camii, dinler arası hoşgörünün sembolüdür.</p><br>
+      <img src="images/habibineccar.jpg" class="img-fluid rounded" alt="Habib-i Neccar Camii"><br>
+    </section>
+    <p style="margin-top:25px"><strong>Aşağıdaki fotoğraflara tıklayıp istediğiniz hakkında daha detaylı bilgi alabilirsiniz</strong></p><br>
+    <div id="hataySlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="http://www.hatay.gov.tr/harbiye-daphne-selalesi" target="_blank"><img src="images/harbiye.jpg" class="d-block w-100" alt="Harbiye Şelaleleri"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="http://www.hatay.gov.tr/uzun-carsi" target="_blank"><img src="images/uzuncarsi.jpg" class="d-block w-100" alt="Uzun Çarşı"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://muze.gov.tr/muze-detay?SectionId=HTY01&DistId=HTY" target="_blank"><img src="images/mozaik.jpg" class="d-block w-100" alt="Mozaik Müzesi"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://www.kulturportali.gov.tr/turkiye/hatay/gezilecekyer/habib-i-neccar-camii" target="_blank"><img src="images/habibineccar.jpg" class="d-block w-100" alt="Habib-i Neccar Camii"></a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hataySlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hataySlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  
+  </main>
+
+  
+  <div class="footer-decoration mt-5">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#a2d5f2"></path>
+    </svg>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
